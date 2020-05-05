@@ -15,14 +15,13 @@ body {
 
 }
 .game-field {
-  width: 18em;
-  height: 18em;
+  width: 39em;
+  height: 39em;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3,3fr);
   grid-template-rows: repeat(3,3fr);
   grid-gap: 0;
-  /* fon?t-size: em; */
 
 }
 .game-field div {
@@ -34,58 +33,65 @@ body {
 h1 {
   color: #760A2C;
   text-align: center;
-  font-size: 4em;
+  font-size: 5em;
   margin: 0;
 }
-h3 {
+h2 {
   color: #760A2C;
-font-size: 1.5em;
-margin: 0;
+  font-size: 3em;
+  margin: 0;
 }
 button {
-background: #56836F;
-color: #760A2C;
-font-family: 'Permanent Marker' ;
-border: none;
+  background: #56836F;
+  color: #760A2C;
+  font-family: 'Permanent Marker' ;
+  border: none;
 }
 .section {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3em;
+  font-size: 6em;
 }
 
 .choose-tie button{
   margin-right: .5em;
   border-radius: 10px;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 .refresh {
   width: 10em;
   justify-self: center;
   padding: .5em;
   border-radius: 10px;
-  font-size: 1em;
+  font-size: 2em;
 }
 .choose-tie {
   grid-row: 2/3;
+}
+.wins p {
+  font-size: 2em;
 }
 
 /* modal */
 
 .modal {
-  font-size: 1.5em;
+  font-size: 3em;
+ 
+}
+.popup-content {
+  border-radius: 10px;
 }
 .modal > .header {
   width: 100%;
   border-bottom: 1px solid gray;
-  font-size: 18px;
+  font-size: 2em;
   text-align: center;
-  padding: 5px;
+  padding: 1em;
 }
 .modal > .content {
   width: 100%;
-  padding: 10px 5px;
+  padding: 2em;
 }
 .modal > .actions {
   width: 100%;
@@ -97,16 +103,21 @@ border: none;
   cursor: pointer;
   position: absolute;
   display: block;
-  padding: 2px 5px;
-  line-height: 20px;
-  right: -10px;
-  top: -10px;
-  font-size: 1em;
+  padding: .3em;
+  line-height: .5em;
+  right: -.4em;
+  top: -.4em;
+  font-size: .8em;
   background: #ffffff;
   border-radius: 18px;
   border: 1px solid #cfcece;
 }
-
+.button {
+  border-radius: 5px;
+  margin: 1em;
+  padding: .5em;
+  font-size: 1em;
+}
 /* grid layout */
 @media (min-width: 768px){
   h1 {

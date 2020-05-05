@@ -79,7 +79,6 @@ class App extends React.Component {
       if (this.state.squares[line[0]] === s
         && this.state.squares[line[1]] === s
         && this.state.squares[line[2]] === s) {
-        //alert(s + " Win!!!");
         this.openModal(this.setState({ whoWon: s }));
         if (s === 'X') {
           this.setState({ countWinX: this.state.countWinX + 1 })
@@ -91,7 +90,6 @@ class App extends React.Component {
     }
     if (this.state.count === 8) {
       this.setState({ countTie: this.state.countTie + 1 })
-      //alert("Tie");
       this.openModal(this.setState({ whoWon: 'Tie!' }))
     }
   }
@@ -120,7 +118,7 @@ class App extends React.Component {
 
         <button className="refresh" onClick={this.refreshGame}>Refresh the game</button>
         <div className="wins">
-          <h3>Wins:</h3>
+          <h2>Wins:</h2>
           <p>X Win: {this.state.countWinX}</p>
           <p>0 Win: {this.state.countWinO}</p>
           <p>Tie: {this.state.countTie}</p>
@@ -128,7 +126,7 @@ class App extends React.Component {
         </div>
 
         <div className="choose-tie">
-          <h3>Choose:</h3>
+          <h2>Choose:</h2>
 
           <button onClick={this.chooseHeandler} data='X'>X</button>
           <button onClick={this.chooseHeandler} data='O'>O</button>
@@ -156,7 +154,6 @@ class App extends React.Component {
           </button>
           </>
         </Popup>
-
       </div >
     )
   }
