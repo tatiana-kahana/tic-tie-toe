@@ -1,0 +1,135 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #B1CDB7;
+  font-family: 'Permanent Marker' ;
+}
+.container {
+  text-align: center;
+  display: grid;
+  grid-gap: 2em;
+
+}
+.game-field {
+  width: 18em;
+  height: 18em;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,3fr);
+  grid-template-rows: repeat(3,3fr);
+  grid-gap: 0;
+  /* fon?t-size: em; */
+
+}
+.game-field div {
+  border: 1px solid #56836F;
+  border-radius: 5px;
+  color: rgb(56, 87, 73);
+}
+
+h1 {
+  color: #760A2C;
+  text-align: center;
+  font-size: 4em;
+  margin: 0;
+}
+h3 {
+  color: #760A2C;
+font-size: 1.5em;
+margin: 0;
+}
+button {
+background: #56836F;
+color: #760A2C;
+font-family: 'Permanent Marker' ;
+border: none;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+}
+
+.choose-tie button{
+  margin-right: .5em;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+.refresh {
+  width: 10em;
+  justify-self: center;
+  padding: .5em;
+  border-radius: 10px;
+  font-size: 1em;
+}
+.choose-tie {
+  grid-row: 2/3;
+}
+
+/* modal */
+
+.modal {
+  font-size: 1.5em;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 1em;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+/* grid layout */
+@media (min-width: 768px){
+  h1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  
+  .wins {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  
+  .game-field{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  
+  .choose-tie {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .refresh {
+    grid-column: 2/3;
+  }
+}
+
